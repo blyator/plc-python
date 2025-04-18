@@ -1,26 +1,18 @@
-# 🧮 Python Simple Calculator
+# 🛒 Discount Calculator
 
-A simple Python program that allows users to input two numbers and choose a mathematical operation (**addition, subtraction, multiplication, or division**) using **letter-based selection (A, B, C, D)**.
+This is a Python script that calculates the final price of an item after applying a discount. The discount is only applied if it is **20% or more**; otherwise, the original price is returned.
 
----
+## 💡 Features
 
-## 📌 Features
+- Prompts the user to input the original price and discount percentage.
+- Applies discount only if it is 20% or higher.
+- Returns the final price after applying the discount.
+- Handles invalid input with error messaging.
 
-✔ Supports **addition (+), subtraction (-), multiplication (\*), and division (/)**  
-✔ Uses **letter-based choices** (`A, B, C, D`) instead of manual input  
-✔ Handles **division by zero** errors gracefully  
-✔ Uses `float()` to allow decimal calculations
+## 🛠️ How to Use
 
----
+1. Make sure you have Python installed (version 3+).
+2. Run the script:
 
-## 📜 How It Works
-
-1. The program asks the user to enter **two numbers**.
-2. The user selects an operation from the following:
-   - `A` → Addition (`+`)
-   - `B` → Subtraction (`-`)
-   - `C` → Multiplication (`*`)
-   - `D` → Division (`/`)
-3. The program performs the selected operation and displays the result.
-
----
+```bash
+python discount.py
