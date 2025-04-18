@@ -1,31 +1,20 @@
-# Get user input
-num1 = float(input("Please enter a number: "))
-num2 = float(input("Now enter  the second number: "))
-
-
-print("\nChoose an operation:")
-print("A) Addition (+)")
-print("B) Subtraction (-)")
-print("C) Multiplication (*)")
-print("D) Division (/)")
-
-operation = input("Enter A, B, C, or D: ").strip().upper()
-
-
-if operation == "A":
-    result = num1 + num2
-    print(f"{num1} + {num2} = {result}")
-elif operation == "B":
-    result = num1 - num2
-    print(f"{num1} - {num2} = {result}")
-elif operation == "C":
-    result = num1 * num2
-    print(f"{num1} * {num2} = {result}")
-elif operation == "D":
-    if num2 != 0: 
-        result = num1 / num2
-        print(f"{num1} / {num2} = {result}")
+def calculate_discount(price, discount_percent):
+    if discount_percent >= 20:
+        discount_amount = price * (discount_percent / 100)
+        return price - discount_amount
     else:
-        print("Division by zero is not allowed.")
-else:
-    print("Invalid choice! Please enter A, B, C, or D.")
+        return price
+
+try:
+    price = float(input("Enter the original price of the item: "))
+    discount_percent = float(input("Enter the discount percentage: "))
+
+    final_price = calculate_discount(price, discount_percent)
+
+    if discount_percent >= 20:
+        print(f"Discount applied. Final price: kes {final_price:.2f}")
+    else:
+        print(f"No discount applied. Price remains: kes {final_price:.2f}")
+
+except ValueError:
+    print("Please enter valid numbers for price and discount percentage.")
